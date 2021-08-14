@@ -1,48 +1,120 @@
-
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .table {
+            position: relative;
+            margin: 5rem 0rem;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body id="body">
 
-<div id="login-card" class="card">
-<div class="card-body">
-  <h2 class="text-center">Welcome to Alpha Billing Reports</h2>
-  <h5 class="text-center">One Stop Reporting Solutions</h5>
-  <br>
-  <form action="/action_page.php">
-    <div class="form-group">
-      <input type="email" class="form-control" id="email" placeholder="Enter user/email id" name="email" value="DR_USER">
-    </div>
-    <div class="form-group">
-      <input type="password" class="form-control" id="email" placeholder="Enter password" name="pswd" value="12345">
-    </div>
+<body>
+  <h2 class="text-center">Customer name</h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <br><br>
-    <a href="table.html">Sign In</a>
-<br>
-    <br>
-   
-    <div id="btn" class="text-center">
-   <button type="button" class="btn btn-primary btn-circle btn-sm"><i class="fa fa-facebook"></i></button>
-   <button type="button" class="btn btn-danger btn-circle btn-sm"><i class="fa fa-google"></i></button>
-   <button type="button" class="btn btn-info btn-circle btn-sm"><i class="fa fa-twitter"></i></button>
-   </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  </form>
-</div>
-<div>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <!-- <a class="nav-link" href="#">Tab1 <span class="sr-only">(current)</span></a> -->
+                    <input class="btn btn-outline-primary" type="button" value="Tab1" id='tab1'>
+                </li>
+                <li class="nav-item">&nbsp;
+                    <!-- <a class="nav-link" href="#">Tab2</a> -->
+                    <input class="btn btn-outline-primary" type="button" value="Tab2" id='tab2'>
+                </li>
+                <li class="nav-item">&nbsp;
+                    <!-- <a class="nav-link" href="#">Tab3</a> -->
+                    <input class="btn btn-outline-primary" type="button" value="Tab3" id='tab3'>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <!-- <button onclick="window.location.href = 'https://app.powerbi.com/view?r=eyJrIjoiN2MwMTczYjktODcwYy00MjQ3LWIyOTktODY2Y2E3ZDZkMTc2IiwidCI6ImExY2E0OWNiLWE3MDctNDRlNy04NmI3LTc0OGI2NmZlZmQwMSJ9';"> Dashboard </button> -->
+                <button type="button" class="btn btn-secondary" onclick="window.location.href = 'https://app.powerbi.com/view?r=eyJrIjoiN2MwMTczYjktODcwYy00MjQ3LWIyOTktODY2Y2E3ZDZkMTc2IiwidCI6ImExY2E0OWNiLWE3MDctNDRlNy04NmI3LTc0OGI2NmZlZmQwMSJ9';">Dashboard</button>
+            </span>
+
+
+        </div>
+    </nav>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!-- 	<script>
+        $(document).ready(function () {
+            $("#tab1").click(function () {
+                $(".table").toggle("slow");
+            });
+            $("#tab2").click(function () {
+                $(".table").toggle("slow");
+            });
+            $("#tab3").click(function () {
+                $(".table").toggle("slow");
+            });
+        });
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+	<script>
+            $("#tab1").click(function () {
+	    	$(".table").toggle("slow");
+            });
+            $("#tab2").click(function () {
+                $(".table").toggle("slow");
+            });
+            $("#tab3").click(function () {
+                $(".table").toggle("slow");
+            });
+	</script>
+
 </body>
 </html>
